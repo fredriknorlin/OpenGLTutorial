@@ -1,10 +1,7 @@
 package renderEngine;
 
 import org.lwjgl.LWJGLException;
-import org.lwjgl.opengl.ContextAttribs;
-import org.lwjgl.opengl.Display;
-import org.lwjgl.opengl.DisplayMode;
-import org.lwjgl.opengl.PixelFormat;
+import org.lwjgl.opengl.*;
 
 public class DisplayManager {
     private static final int WIDTH = 1280;
@@ -22,6 +19,8 @@ public class DisplayManager {
         catch(LWJGLException e){
             e.printStackTrace();
         }
+
+        GL11.glViewport(0, 0, WIDTH, HEIGHT);
     }
 
     public static void updateDisplay(){
