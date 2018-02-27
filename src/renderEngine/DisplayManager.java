@@ -17,6 +17,7 @@ public class DisplayManager {
         try{
             Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
             Display.create(new PixelFormat(), attribs);
+            Display.setTitle("New Title added");
         }
         catch(LWJGLException e){
             e.printStackTrace();
